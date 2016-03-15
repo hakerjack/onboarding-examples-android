@@ -41,7 +41,7 @@ public class OnboardingWithPlaceholderActivity extends AppCompatActivity {
                 onFakeCreate();
             }
 
-        }, 500);
+        }, 2000);
     }
 
     private void onFakeCreate() {
@@ -53,11 +53,11 @@ public class OnboardingWithPlaceholderActivity extends AppCompatActivity {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler);
         mFab = findViewById(R.id.fab);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setItemAnimator(ItemAnimatorFactory.slidein());
-
-        mAdapter = new RecyclerAdapter();
-        recyclerView.setAdapter(mAdapter);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        recyclerView.setItemAnimator(ItemAnimatorFactory.slidein());
+//
+//        mAdapter = new RecyclerAdapter();
+//        recyclerView.setAdapter(mAdapter);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolbar.getViewTreeObserver().addOnPreDrawListener(
@@ -99,7 +99,7 @@ public class OnboardingWithPlaceholderActivity extends AppCompatActivity {
                 super.onAnimationEnd(animation);
 
                 // Fire item animator
-                mAdapter.addAll(ModelItem.getFakeItems());
+                //mAdapter.addAll(ModelItem.getFakeItems());
 
                 // Animate fab
                 ViewCompat.animate(mFab).setStartDelay(600)

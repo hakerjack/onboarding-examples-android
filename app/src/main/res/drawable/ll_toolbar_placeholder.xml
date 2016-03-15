@@ -3,17 +3,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:opacity="opaque"
     >
-    <item>
-        <shape>
-            <solid android:color="@color/grey"/>
-        </shape>
-    </item>
 
-    <item
-        android:height="180dp"
-        android:gravity="top">
+    <item>
+
         <shape android:shape="rectangle">
             <solid android:color="?colorPrimary"/>
+        </shape>
+    </item>
+    <item android:top="200dp">
+        <shape>
+            <solid android:color="@color/grey"/>
         </shape>
     </item>
 
